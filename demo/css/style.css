@@ -44,8 +44,8 @@ canvas{
 .textName{
   color: rgb(0, 0, 0);
   font-family: "Arial";
-  font-weight: 700;
-  font-size: 120px;
+  font-weight: bold;
+  font-size: 65px;
 }
 .name{
   position: absolute;
