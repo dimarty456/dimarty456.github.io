@@ -43,6 +43,9 @@ canvas{
 /* ---- stats.js ---- */
 .textName{
   color: rgb(0, 0, 0);
+  font-family: "Arial";
+  font-weight: 700;
+  font-size: 65px;
 }
 .name{
   position: absolute;
