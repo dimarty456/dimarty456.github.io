@@ -80,7 +80,6 @@ function buildBoard() {
 // CELL CLICK EVENT FOR PLAYER TO ATTEMPT TO MAKE MOVE
 function makeMove(event) {
   console.log(turn);
-  //console.log(event);
   let currentCell = parseInt(event.currentTarget.firstElementChild.dataset.id);
   let cellToAddToken = document.querySelector(`[data-id='${currentCell}']`);
   
@@ -98,20 +97,12 @@ function makeMove(event) {
       console.log(gameBoard);
       gameBoard[currentCell] = 'O';
     }
-    ///*
-    //var temp = document.querySelector('.letter');
     console.log(cellToAddToken);
-
-    //temp.style.animationDuration = "2s";
+;
     cellToAddToken.style.animationDuration = "1.5s";
-    //temp.style.animationName = "slidein";
     cellToAddToken.style.animationName = "slidein";
     cellToAddToken.removeAttribute("animation-duration");
     cellToAddToken.removeAttribute("animation-name");
-    //*/
-
-    //style.animation-duration = 2;
-    //style.animation-name = slidein;
   }
     
   // CHECK IF WE HAVE A WINNER
@@ -220,6 +211,8 @@ function resetBoard() {
   cellToAddToken.forEach( square => {
     square.textContent = '';
     square.parentElement.classList.remove('board__cell--winner');
+    console.log(square);
+    square.removeAttribute("style");
   });
 
   turn = 0;
@@ -230,7 +223,6 @@ function resetBoard() {
     <span class="name--style">${playerX.name}</span>, ходи!
     <div class="u-r-winner"></div>
   `
-
   addCellClickListener();
 }
 
